@@ -59,7 +59,7 @@ class MainWindow(QMainWindow):
 
         self.source_image_canvas = MplCanvas()
         self.ct_image_canvas = MplCanvas()
-        self.source_image_canvas.axes.set_title("Исходное изображение")
+        self.source_image_canvas.axes.set_title("Исходный объект")
         self.ct_image_canvas.axes.set_title("Результат КТ")
 
 
@@ -184,7 +184,7 @@ class MainWindow(QMainWindow):
             self.source_image = np.array(image, dtype=float)
             self.source_image_canvas.axes.cla()
             self.source_image_canvas.axes.imshow(self.source_image, cmap='gray')
-            self.source_image_canvas.axes.set_title('Исходное изображение')
+            self.source_image_canvas.axes.set_title('Исходный объект')
             self.source_image_canvas.draw()
             self.image_path_edit.setText(fileNames[0])
             print(self.source_image.shape)
